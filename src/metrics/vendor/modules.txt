@@ -1,0 +1,11 @@
+# github.com/golang/glog v1.0.0
+## explicit; go 1.11
+github.com/golang/glog
+# github.com/influxdata/influxdb v1.11.0
+## explicit; go 1.19
+github.com/influxdata/influxdb/client/v2
+github.com/influxdata/influxdb/models
+github.com/influxdata/influxdb/pkg/escape
+# libvirt.org/go/libvirt v1.8010.0
+## explicit; go 1.11
+libvirt.org/go/libvirt

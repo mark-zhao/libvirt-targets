@@ -1,0 +1,65 @@
+syntax = "proto3";
+package binary;
+option go_package = ".;binary";
+
+message Header {
+  enum Version {
+    Version0 = 0;
+  }
+
+  Version version = 1;
+  string database = 2;
+  string retention_policy = 3;
+  int64 shard_duration = 4;
+}
+
+message BucketHeader {
+  sfixed64 start = 1;
+  sfixed64 end   = 2;
+}
+
+message BucketFooter {
+
+}
+
+message FloatPoints {
+  repeated sfixed64 timestamps = 1;
+  repeated double values = 2;
+}
+
+message IntegerPoints {
+  repeated sfixed64 timestamps = 1;
+  repeated int64 values = 2;
+}
+
+message UnsignedPoints {
+  repeated sfixed64 timestamps = 1;
+  repeated uint64 values = 2;
+}
+
+message BooleanPoints {
+  repeated sfixed64 timestamps = 1;
+  repeated bool values = 2;
+}
+
+message StringPoints {
+  repeated sfixed64 timestamps = 1;
+  repeated string values = 2;
+}
+
+enum FieldType {
+  FloatFieldType = 0;
+  IntegerFieldType = 1;
+  UnsignedFieldType = 2;
+  BooleanFieldType = 3;
+  StringFieldType = 4;
+}
+
+message SeriesHeader {
+  FieldType field_type = 1;
+  bytes series_key = 2;
+  bytes field = 3;
+}
+
+message SeriesFooter {
+}

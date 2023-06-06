@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package backup_util;
+option go_package = ".;backup_util";
+
+//========================================================================
+//
+// Metadata
+//
+//========================================================================
+
+message PortableData {
+    required bytes Data = 1;
+    required uint64 MaxNodeID = 2;
+}

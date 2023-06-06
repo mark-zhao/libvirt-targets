@@ -1,0 +1,10 @@
+{
+    "db":{
+            "dbip"          : "1.1.1.1:8086",
+            "mydb"          : "libvirt",   
+            "mymeasurement" : "metrics",
+            "tags"          : "PJ",
+            "username"      : "csp",
+            "password"      : "123456"
+         }
+}
